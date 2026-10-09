@@ -1,0 +1,28 @@
+-- 1. CRIAR O BANCO DE DADOS
+CREATE DATABASE vestShop;
+
+-- 2. SELECIONAR O BANCO DE DADOS
+USE vestShop;
+
+-- 3. VISUALIZAR OS USUÁRIOS
+SELECT * FROM usuario;
+
+-- 4. LISTAR AS TABELAS
+SHOW TABLES;
+
+-- 5. CONSULTAR A ESTRUTURA DA TABELA
+DESCRIBE usuario;
+
+-- 6. ADICIONAR A COLUNA DO ONBOARDING
+ALTER TABLE usuario
+ADD COLUMN onboarding_concluido BOOLEAN NOT NULL DEFAULT FALSE;
+
+-- 7. CONSULTAR DADOS ESPECÍFICOS DOS USUÁRIOS
+SELECT id_usuario, nome, email, data_cadastro
+FROM usuario
+ORDER BY id_usuario;
+
+-- 8. EXCLUIR USUÁRIOS ESPECÍFICOS
+SELECT id_usuario, nome, email
+FROM usuario
+WHERE id_usuario IN (1, 2, 3, 4, 5, 6);
